@@ -30,9 +30,7 @@ function sh_http(){
   alist_stop
 }
 
-if [ -f "$base_dir/rclone.sh.conf" ]; then
-    
-else
+if ! [ -f "$base_dir/rclone.sh.conf" ]; then
     cat <<EOF > "$base_dir/rclone.sh.conf"
 [@cwd]      
 type = local
