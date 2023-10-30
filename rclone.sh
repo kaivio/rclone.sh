@@ -31,7 +31,7 @@ function sh_http(){
 }
 
 if [ -f "$base_dir/rclone.sh.conf" ]; then
-    ;
+    
 else
     cat <<EOF > "$base_dir/rclone.sh.conf"
 [@cwd]      
