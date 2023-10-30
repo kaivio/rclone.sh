@@ -30,7 +30,20 @@ function sh_http(){
   alist_stop
 }
 
-rclone --config "$base_dir/rclone.sh.conf" config touch
+if [ -f "$base_dir/rclone.sh.conf" ]; then
+    ;
+else
+    cat <<EOF > "$base_dir/rclone.sh.conf"
+[@cwd]      
+type = local
+
+[@index]
+type = combine
+upstreams = @cwd=@cwd:
+EOF
+fi
+
+
 if [ -z "$1" ]; then
     echo "alive"
 elif [ "$1" = "dav" ]; then
