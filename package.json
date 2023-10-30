@@ -1,0 +1,12 @@
+{
+  "name": "rclone.sh",
+  "version": "1.0.0",
+  "main": "rclone.sh",
+  "bin": {
+    "rclone.sh": "./rclone.sh"
+  },
+  "scripts": {},
+  "repository": "git@github.com:kaivio/rclone.sh",
+  "author": "kaivio <kaivio@github.com>",
+  "license": "MIT"
+}
