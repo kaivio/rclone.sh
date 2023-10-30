@@ -4,11 +4,13 @@ base_dir="$HOME/.config/rclone"
 mkdir -p "$base_dir"
 
 function alist_start(){
-  alist start --data "$base_dir/data"
+  alist server --data "$base_dir/data" &
+  pid=$!
+  echo alist pid=$pid
 }
 
 function alist_stop(){
-  alist stop
+  kill $pid
 }
 
 
