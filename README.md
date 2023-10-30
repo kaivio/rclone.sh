@@ -19,7 +19,12 @@ rclone.sh ftp
 rclone.sh http
 ```
 
-# 用法
+## 安装
+```
+npm i -g https://github.com/kaivio/rclone.sh
+```
+
+## 用法
 
 在rclone.sh.conf添加webdav挂载alist
 
