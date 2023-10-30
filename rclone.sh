@@ -6,7 +6,6 @@ mkdir -p "$base_dir"
 function alist_start(){
   alist server --data "$base_dir/data" &
   pid=$!
-  echo alist pid=$pid
 }
 
 function alist_stop(){
